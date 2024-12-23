@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./index.css">
+</head> 
+<body>
+    <div id="bg-dull">
+        <div id="modal-center">
+            <div class="form-container" id="dialog-box" style="display: block;">
+                <h1>Event Name</h1>
+                <form id="bookingForm" action="/submit" method="post">
+                    <div class="user-box">
+                        <input type="text"  name="Name" required> 
+                        <label>Name</label>
+                    </div>
+                    <div class="user-box">
+                        <input type="text" required="" name="MobileNumber" required>
+                        <label>Mobile</label>
+                    </div>
+                    <div class="user-box">
+                        <input type="text" required="" name="Email" >
+                        <label>Email</label>
+                    </div>
+    
+    
+                    <div class="detail-row">
+                        <div class="address">
+                            <label for="city">City</label>
+                            <input type="text" id="city" name="city" required>
+                        </div>
+                        <div class="address">
+                            <label for="pin">Pin</label>
+                            <input type="text" id="pin" name="pin" required>
+                        </div>
+                    </div>
+    
+    
+    
+                    <div class="form-group">
+                        <label for="service" id="services">Services:</label>
+    
+                        <div class="checkbox-grid">
+                            
+                            <label for="cateror">1. Cateror</label>
+                            <input type="checkbox" id="cateror" name="services[]" value="cateror" checked>
+    
+                            
+                            <label for="pandit">2. Pandit</label>
+                            <input type="checkbox" id="pandit" name="services[]" value="pandit" checked>
+    
+                            
+                            <label for="dj">3. DJ</label>
+                            <input type="checkbox" id="dj" name="services[]" value="dj" checked>
+    
+                            
+                            <label for="photographer">4. Photographer</label>
+                            <input type="checkbox" id="photographer" name="services[]" value="photographer" checked>
+    
+                            
+                            <label for="decorator">5. Decorator</label>
+                            <input type="checkbox" id="decorator" name="services[]" value="decorator" checked>
+                        </div>
+                    </div>
+    
+                    <label for="date">Date:</label>
+                    <div class="detail-row">
+                    
+                            <div class="time">
+                                <label for="fromTime">From:</label>
+                                <input type="date" id="time-input" name="fromTime" required>
+                            </div>
+                            <div class="time">
+                                <label for="toTime">To:</label>
+                                <input type="date" id="time-input" name="toTime" required>
+                            </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="netAmount" id="amount">Net Amount: &#8377; 99999</label>
+                    </div>
+                    <div class="check-availability">
+                        <button type="submit">Check Availability</button>
+                    </div>
+                    <hr>
+                    <div class="agreement">
+                        <h2>Agreement</h2>
+                        <p>By proceeding with the booking, you agree to the following terms and conditions:</p>
+                        <ul>
+                            <li>A non-refundable deposit <b> 30% of the total amount </b>will be deducted upon booking.</li>
+                            <li>Once the booking is confirmed, it cannot be canceled.</li>
+                            </ul>
+                        <div class="checkbox-condition">
+                            <input type="checkbox" id="agreeToTerms" name="agreeToTerms" required>
+                            <label for="agreeToTerms">I agree to the terms and conditions.</label>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="form-group">
+                        <div id="payment">
+                        <p>Pre-booking amount: ₹<span id="prebooking-amount"></span></p>
+                        <div class="payment-options">
+                            <div id="payment-method">
+                                <label for="payment-method">Payment Method:</label>
+                            </div>
+                            <div id="payment-method">
+                                <select id="payment-method" name="payment-method">
+                                    <option value="credit-card">Credit Card</option>
+                                    <option value="debit-card">Debit Card</option>
+                                    <option value="net-banking">Net Banking</option>
+                                    <option value="upi">UPI</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+</body>
+</html>
