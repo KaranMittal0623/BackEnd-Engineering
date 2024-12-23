@@ -1,0 +1,249 @@
+#bg-dull{
+    width: 200vh;
+    height: 100vh;
+    /* background-color:(0, 0, 0,0.7); */
+    /* position: fixed; */
+    /* display: none; */
+    top: 0;
+}
+.form-container {
+    /* max-width: 800px; */
+    margin-top: 80px;
+    /* margin-bottom: 400px; */
+    padding: 20px;
+    background-color:#eeeeee;
+    color: #373A40;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    top: 0;
+    /* position: fixed; */
+    z-index: 2000;
+    /* height: 600px; */
+    /* overflow: hidden; */
+    /* overflow-y: scroll; */
+    border-radius: 20px;
+}
+#modal-center{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.form-group {
+    margin-bottom: 15px;
+}
+.form-container h1{
+    text-align: center;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+}
+
+.checkbox-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 10px; 
+    margin-top: 20px;
+}
+
+.checkbox-grid input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+    appearance: none;
+    border: 2px solid #373A40;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.checkbox-grid input[type="checkbox"]:checked {
+    border: 2px solid #373A40;
+    background-image:url('../images/icons8-tick-480.png');
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+.checkbox-grid label {
+    display: inline-block;
+    margin-left: 5px; /* Adjust label position next to checkbox */
+}
+
+/* Additional CSS for responsiveness */
+
+
+.user-box {
+    position: relative;
+    margin-bottom: 20px;
+}
+.user-box input {
+    width: 100%;
+    padding: 10px 0;
+    font-size: 16px;
+    color: #373A40;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid #000;
+    outline: none;
+}
+.user-box label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    transition: 0.5s;
+    color: #000;
+}
+
+.address , .time{
+    display: flex;
+    /* flex-wrap: wrap; */
+    /* flex-direction: row; */
+    /* justify-content: center; */
+    justify-content: left;
+}
+.detail-row{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-bottom: 10px;
+    margin-top: 20px;
+
+}
+
+#city , #pin, #time-input{
+    /* width: 100%; */
+    /* padding: 10px 0; */
+    font-size: 16px;
+    color: #000;
+    background: transparent;
+    border: none;
+    margin-left: 16px;
+    border-bottom: 1px solid #000;
+    outline: none;
+}
+#services{
+    font-size: 16px;
+}
+#amount{
+    text-align: end;
+    font-weight: 20px;
+    font-size: 20px;
+    margin-top: 30px;
+}
+
+.check-availability button{
+    color:#eeeeee;
+    background-color:#686d76;
+    padding: 10px 30px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 20px;
+}
+
+.check-availability{
+    text-align: center;
+}
+
+.agreement h2,p{
+    text-align: center;
+
+}
+.agreement ul li{
+    /* margin-top: 10px; */
+    list-style-type: none;
+    text-align: center;
+    padding:5px;
+}
+
+.checkbox-condition{
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+#payment{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    margin-top: 20px;
+
+}
+.payment-options{
+    display: flex;
+    /* justify-content: space-evenly; */
+    flex-wrap: wrap;
+    margin-top: 16px;
+}
+
+#payment-method select {
+    width: 100%;
+    /* padding: 10px 0; */
+    font-size: 15px;
+    margin-left: 10px;
+    color: #000;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid #000;
+    outline: none;
+}
+
+.user-box input:focus ~ label,
+.user-box input:valid ~ label {
+    top: -15px;
+    font-size: 12px;
+    color: black;
+}
+
+@media (max-width: 768px) {
+    .form-container {
+        padding: 10px;
+    }
+}
+@media (max-width:516px){
+    .checkbox-grid{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+    /* .detail-row .address input{
+        width:100%;
+    } */
+}
+
+@media (max-width:480px){
+    .check-availability{
+        margin-top: 30px;
+    }
+    .detail-row .address{
+        margin-left: 0px;
+    }
+
+}
+@media only screen and (max-width: 768px) {
+    .detail-row {
+      display: flex;
+      flex-direction: column;
+      margin-top: -20px;
+    }
+    .address {
+      width: 100%;
+      padding-top:20px;
+      flex-direction: column;
+    }
+    .address input {
+      width: 100%;
+      /* margin-left: 0px; */
+      /* width: 100%;
+      padding: 10px 0;
+      font-size: 16px;
+      color: #373A40;
+      background: transparent; */
+      /* border: none;
+      border-bottom: 1px solid #000;
+      outline: none; */
+    }
+    .time{
+        width: 100%;
+        margin-top: 20px;
+    }
+}
